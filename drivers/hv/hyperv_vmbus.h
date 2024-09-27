@@ -299,11 +299,6 @@ struct vmbus_connection {
 	 * drop to zero.
 	 */
 	struct completion ready_for_resume_event;
-	/*
-	 * Completed once the host has offered all channels. Note that
-	 * some channels may still be on a work queue, being processed.
-	 */
-	struct completion all_offers_delivered_event;
 };
 
 
